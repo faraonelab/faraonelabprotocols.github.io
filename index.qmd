@@ -1,5 +1,5 @@
 ---
-title: "faraonelabprotocols.github.io"
+title: "faraonelab.github.io/protocols"
 ---
 
 This is a Quarto website.
