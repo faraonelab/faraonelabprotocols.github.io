@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pages: write
+      id-token: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -34,20 +36,17 @@ jobs:
 
       - name: Render and Encrypt
         run: |
-          # 1. Build the site
+          # 1. Ensure clean slate
+          rm -rf docs/
+          # 2. Render site
           quarto render
-          
-          # 2. Force encryption on every HTML file found in the docs directory
-          # The --overwrite flag replaces the original file with the locked version
-          find docs -name "*.html" -exec staticrypt {} --password "${{ secrets.SITE_PASSWORD }}" --short --overwrite \;
-          
-          # 3. Verify files were actually changed
-          echo "Verification: Checking file sizes..."
-          ls -lh docs/index.html
+          # 3. Recursive encryption of the entire directory
+          npx staticrypt@latest docs -r --password "${{ secrets.SITE_PASSWORD }}" --overwrite --verbose
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './docs'
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
-          force_orphan: true
+        uses: actions/deploy-pages@v4
