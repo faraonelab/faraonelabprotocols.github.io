@@ -18,11 +18,10 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      # THIS STEP WAS MISSING
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
         with:
-          r-version: '4.4.0' # Matches the version in your renv/
+          r-version: '4.4.0'
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -32,14 +31,22 @@ jobs:
       - name: Install R Dependencies
         uses: r-lib/actions/setup-renv@v2
 
+      - name: Install Staticrypt
+        run: npm install -g staticrypt
+
       - name: Render and Encrypt
         run: |
-          # 1. Build the site to the 'docs' folder
+          # 1. Clean and build
+          rm -rf docs/
           quarto render
           
-          # 2. Encrypt the entire 'docs' folder recursively
-          # This replaces your files with encrypted versions automatically
-          npx staticrypt@latest docs -r --password "${{ secrets.SITE_PASSWORD }}" --overwrite
+          # 2. Find and encrypt every .html file in the docs folder
+          # This is more reliable than '-r' for CI environments
+          find docs -name "*.html" -exec npx staticrypt@latest {} --password "${{ secrets.SITE_PASSWORD }}" --overwrite --short --verbose \;
+          
+          # 3. Verification: print the size of index.html to logs
+          # If it is > 5KB, it worked.
+          ls -lh docs/index.html
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
