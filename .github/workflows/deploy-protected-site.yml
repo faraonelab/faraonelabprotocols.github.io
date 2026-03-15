@@ -55,6 +55,9 @@ jobs:
       - name: Add .nojekyll to output
         run: touch _site/.nojekyll
 
+      - name: Copy logo to output
+        run: cp logo.png _site/logo.png
+
       - name: Protect homepage with Staticrypt
         env:
           STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
