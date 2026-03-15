@@ -57,7 +57,7 @@ jobs:
       - name: Protect site with Staticrypt
         env:
           STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
-        run: npx staticrypt _site/* -r -d _site
+        run: npx staticrypt _site -r -d _site
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
