@@ -64,13 +64,17 @@ jobs:
             -d _site \
             --salt "$STATICRYPT_SALT" \
             --remember 30 \
+            --template-logo "logo.png" \
             --template-title "Faraone Lab Protocols" \
-            --template-instructions "Enter the password provided by the lab." \
+            --template-instructions "Internal research protocols and documentation. Enter the password provided by the lab." \
             --template-button "Access Protocols" \
             --template-placeholder "Password" \
             --template-remember "Remember this device" \
             --template-toggle-hide "Hide password" \
-            --template-toggle-show "Show password"
+            --template-toggle-show "Show password" \
+            --template-color-primary "#1b4f9c" \
+            --template-color-secondary "#0b3d91" \
+            --template-color-background "#f5f7fb"
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
