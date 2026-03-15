@@ -33,23 +33,20 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install system libraries
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
+      - name: Setup R dependencies with cache
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::knitr
+            any::rmarkdown
+            any::xml2
+            any::curl
+            any::httr
+            any::jsonlite
+            any::tidyverse
 
       - name: Install npm dependencies
         run: npm install
-
-      - name: Install R packages
-        run: |
-          Rscript -e "install.packages(c('knitr','rmarkdown','xml2','curl','httr','jsonlite','tidyverse'), repos='https://cloud.r-project.org')"
-
-      - name: Check R installation
-        run: |
-          which R
-          which Rscript
-          Rscript --version
 
       - name: Render Quarto site
         run: quarto render
