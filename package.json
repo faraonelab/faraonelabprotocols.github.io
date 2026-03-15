@@ -1,5 +1,12 @@
 {
-  "dependencies": {
-    "staticrypt": "^3.5.4"
+  "name": "quarto-staticrypt-site",
+  "private": true,
+  "scripts": {
+    "build": "quarto render",
+    "protect": "npx staticrypt _site/* -r -d _site --config false",
+    "build:protected": "quarto render && npx staticrypt _site/* -r -d _site --config false"
+  },
+  "devDependencies": {
+    "staticrypt": "^3.5.2"
   }
 }
