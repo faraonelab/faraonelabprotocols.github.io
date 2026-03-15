@@ -55,9 +55,6 @@ jobs:
       - name: Add .nojekyll to output
         run: touch _site/.nojekyll
 
-      - name: Copy logo to output
-        run: cp logo.png _site/logo.png
-
       - name: Protect homepage with Staticrypt
         env:
           STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
@@ -67,7 +64,6 @@ jobs:
             -d _site \
             --salt "$STATICRYPT_SALT" \
             --remember 30 \
-            --template-logo "logo.png" \
             --template-title "Faraone Lab Protocols" \
             --template-instructions "Internal research protocols and documentation. Enter the password provided by the lab." \
             --template-button "Access Protocols" \
@@ -76,8 +72,7 @@ jobs:
             --template-toggle-hide "Hide password" \
             --template-toggle-show "Show password" \
             --template-color-primary "#1b4f9c" \
-            --template-color-secondary "#0b3d91" \
-            --template-color-background "#f5f7fb"
+            --template-color-secondary "#0b3d91"
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
