@@ -55,28 +55,10 @@ jobs:
       - name: Add .nojekyll to output
         run: touch _site/.nojekyll
 
-      - name: Prepare private site
-        run: |
-          mkdir -p _site/private
-          find _site -maxdepth 1 -name "*.html" -exec mv {} _site/private/ \;
-          [ -d _site/site_libs ] && mv _site/site_libs _site/private/ || true
-          [ -d _site/images ] && mv _site/images _site/private/ || true
-          [ -d _site/assets ] && mv _site/assets _site/private/ || true
-          [ -f _site/styles.css ] && mv _site/styles.css _site/private/ || true
-
-      - name: Create login gateway
+      - name: Protect homepage with Staticrypt
         env:
           STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
-        run: |
-          npx staticrypt _site/private/index.html \
-            -d _site \
-            --title "Faraone Lab Protocols" \
-            --instructions "Enter the password to access the protocols website."
-
-      - name: Fix links for private subfolder
-        run: |
-          find _site/private -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) -exec sed -i 's|href="/protocols/|href="/protocols/private/|g' {} +
-          find _site/private -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) -exec sed -i 's|src="/protocols/|src="/protocols/private/|g' {} +
+        run: npx staticrypt _site/index.html -d _site
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

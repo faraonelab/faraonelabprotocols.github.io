@@ -5,8 +5,6 @@ project:
 website:
   title: "Faraone Lab Protocols"
   site-url: https://faraonelab.github.io/protocols/
-  repo-url: https://github.com/faraonelab/protocols
-
   navbar:
     left:
       - href: index.qmd
