@@ -1,11 +1,17 @@
+project:
+  type: website
+  output-dir: _site
+
 website:
-    title: "faraonelab.github.io/protocols"
-    site-url: https://faraonelab.github.io/protocols/
-    navbar:
-      left:
-        - href: index.qmd
-          text: Home
-        - about.qmd
+  title: "Faraone Lab Protocols"
+  site-url: https://faraonelab.github.io/protocols/
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
 
 format:
   html:
