@@ -1,9 +1,0 @@
----
-title: "About"
----
-
-About this site - another trial
-
-```{r}
-1 + 1
-```

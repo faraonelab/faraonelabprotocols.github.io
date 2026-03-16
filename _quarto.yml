@@ -18,11 +18,9 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: About
-  
+
   sidebar:
-    style: "docked"
+    style: "floating"
     search: true
     collapse-level: 99
     contents:
@@ -54,11 +52,18 @@ format:
     theme: 
       - yeti
       - styles/custom.scss
-    mainfont: Nunito Sans
+    mainfont: "Nunito Sans"
     toc: true
+    toc-location: right
+    page-layout: full
+    grid:
+      sidebar-width: 250px
+      body-width: 1350px
+      margin-width: 160px
+      gutter-width: 1.5rem
     link-external-newwindow: true
     smooth-scroll: true
-    format-links: [pdf] 
+    format-links: [pdf]
 
   pdf:
     documentclass: scrreport
