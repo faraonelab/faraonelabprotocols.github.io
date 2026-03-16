@@ -1,0 +1,95 @@
+name: Build and deploy protected Quarto site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Restore renv cache
+        uses: actions/cache@v4
+        with:
+          path: renv/library
+          key: ${{ runner.os }}-renv-${{ hashFiles('renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-renv-
+
+      - name: Restore R packages
+        run: |
+          Rscript -e "install.packages('renv', repos='https://cloud.r-project.org')"
+          Rscript -e "renv::restore(prompt = FALSE)"
+
+      - name: Install npm dependencies
+        run: npm install
+
+      - name: Render Quarto site
+        run: quarto render
+
+      - name: Add .nojekyll to output
+        run: touch _site/.nojekyll
+
+      - name: Protect homepage with Staticrypt
+        env:
+          STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
+          STATICRYPT_SALT: ${{ secrets.STATICRYPT_SALT }}
+        run: |
+          npx staticrypt _site/index.html \
+            -d _site \
+            --salt "$STATICRYPT_SALT" \
+            --remember 30 \
+            --template-title "Faraone Lab Protocols" \
+            --template-instructions "Internal research protocols and documentation. Enter the password provided by the lab." \
+            --template-button "Access Protocols" \
+            --template-placeholder "Password" \
+            --template-remember "Remember this device" \
+            --template-toggle-hide "Hide password" \
+            --template-toggle-show "Show password" \
+            --template-color-primary "#1b4f9c" \
+            --template-color-secondary "#0b3d91"
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

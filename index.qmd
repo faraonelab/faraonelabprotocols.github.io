@@ -1,0 +1,8 @@
+---
+title: "Faraone Lab Protocols"
+---
+## Welcome!
+
+This is the Faraone Lab protocols website. It is, and always will be, a work in progress.
+
+Check out the [Faraone Lab Website](https://faraonelab.github.io/) for more information about our research.

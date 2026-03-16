@@ -1,0 +1,17 @@
+{
+  "hash": "ec6f4f273766741ea62f5592481b70f8",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"faraonelab.github.io/protocols\"\n---\n\nThis is a Quarto website.\n\nTo learn more about Quarto websites visit <https://quarto.org/docs/websites>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n\n\nunder construction 2\n\nadding the pages to ask password and adding more stuff\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

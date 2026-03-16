@@ -1,0 +1,56 @@
+---
+title: "Welcome to the Lab"
+format: html
+---
+
+# Welcome to the Faraone Lab!
+
+This guide will help you orient yourself to where things can be found and how to access them. If you have any questions after reading through this, don't be afraid to ask other members of the lab.
+
+## Onboarding Checklist
+
+* [ ] **Slack:** Dr. Faraone will add you to our Lab Slack Channel.
+* [ ] **MSC Onboarding:** Complete the lab intake form and read the lab handbook.
+* [ ] **Google Drive:** Provide Dr. Faraone with your preferred email for access to:
+    * The shared lab resources folder.
+    * The Lab Calendar.
+    * Your shared 1:1 meeting notes doc.
+* [ ] **GitHub:** * Sign up for a [GitHub account](https://github.com).
+    * Ask to be added as a collaborator to this protocols page.
+    * *Tip:* Download [GitHub Desktop](https://desktop.github.com/) to manage changes easily.
+* [ ] **Computing:** If you require high-performance computing access, contact Acadia IT for cluster credentials.
+* [ ] **Safety Training:** Complete the required Environmental Health and Safety (EHS) trainings before starting wet lab or fieldwork.
+
+---
+
+## Safety First
+
+### Safety Data Sheets (SDS) & Hazardous Waste
+All safety data sheets, chemical inventory, and hazardous waste labels are located in the **Lab Safety Binder**.
+
+**Hazardous Waste Protocol:**
+* **Direct Contact:** Our point of contact for waste removal is [Insert Name/Email].
+* **Labeling:** Every container **must** be labeled. Labels are located next to the sink. 
+* **Important:** Do not date the label until the container is full and ready for pickup.
+* **Secondary Containment:** Always transport liquid waste in a secondary container to avoid spills.
+
+![Hazardous Waste Label Example](images/waste-label-example.jpg)
+
+---
+
+## Shared Lab Space
+
+We share equipment across the department. Please ensure you log your use in the **Common Lab Space Spreadsheet** for the following:
+
+| Equipment | Purpose |
+|-----------|---------|
+| **Sonicator** | DNA Shearing |
+| **TapeStation** | DNA/RNA Quality Assessment |
+| **Plate Reader** | High-throughput DNA Quantification |
+| **Centrifuge** | Large volume processing |
+
+---
+
+<button onclick="window.print()" class="print-button" title="Print Protocol">
+  <i class="bi bi-printer"></i>
+</button>

@@ -1,0 +1,450 @@
+/*-- scss:defaults --*/
+
+// Colors
+$primary: #2B7A8B;         // teal
+$secondary: #A6DDB4;       // mint accent
+$ink: #111315;             // text color
+$light: #E6E9ED;           // light border gray
+$sand: #eeeeee;
+$gold: #e8e3d3;
+
+// Quarto / Bootstrap overrides
+$body-bg: white;
+$body-color: $ink;
+$link-color: $primary;
+$link-hover-color: darken($primary, 10%);
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Bebas+Neue&family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300&family=Montserrat:wght@300;400&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,700;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,700&family=Nunito:wght@300&family=Source+Sans+3:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/*-- scss:rules --*/
+
+@media print {
+  .print-button, 
+  .navbar, 
+  #quarto-sidebar, 
+  .quarto-sidebar-toggle,
+  .nav-footer,
+  #quarto-toc-sidebar,
+  .back-to-top,
+  .quarto-post-details {
+    display: none !important;
+  } 
+} // <--- This closing brace is missing in your code
+
+/* -- Quarto Layout Fixes (Glue to Footer) -- */
+#quarto-content.quarto-container {
+  padding-bottom: 0 !important;
+}
+
+main.content {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Align all footer columns vertically in the center */
+.nav-footer {
+  display: flex;
+  align-items: center; /* This handles the vertical centering */
+  justify-content: space-between; /* This keeps them spread across the page */
+}
+
+/* Optional: Ensure the text inside the columns is also vertically centered 
+   if one column is significantly taller than the others */
+.nav-footer-left, 
+.nav-footer-center{
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* -- Fonts -- */
+h1, .h1 {
+   font-family: 'Economica', sans-serif;
+   font-weight: normal;
+   text-transform: uppercase;
+}
+
+@keyframes animated_text {
+  0%, 100% { background-position: 0px 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.welcome-headline {
+  font-size: 3.1rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1;
+  @media (max-width: 768px) { font-size: 2.1rem; }
+}
+
+.welcome-subheadline {
+  font-size: 2.1rem;
+  font-family: 'Economica', sans-serif;
+  text-transform: uppercase;
+  @media (max-width: 768px) { font-size: 1.3rem; }
+}
+
+/* -- Navbar & Logo - MAIN PAGE  -- */
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 1.2em;
+  font-family: 'Economica', sans-serif;
+  text-transform: uppercase;
+}
+
+.navbar-brand.navbar-brand-logo {
+  display: flex;
+  padding: 0;
+  margin-right: 0;
+  margin-left: 1.5em;
+  @media (max-width: 767px) { margin-left: 0; }
+}
+
+.navbar-logo {
+  max-height: 150px;
+  width: auto;
+  align-items: baseline;
+  @media (max-width: 991px) { max-height: 100px; }
+}
+
+@media (max-width: 991px) {
+  .navbar-nav-scroll { background: #EAE7E7; width: 70%; }
+}
+
+/* -- Layout: Overlap & Squares -- */
+.overlap-block {
+  background-color: rgba(238, 238, 238, 0.85) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 8px;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  h3 { margin-top: 0; font-family: 'Economica', sans-serif; font-weight: 700; }
+}
+
+.square-img-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 4px;
+  z-index: 1;
+  img { width: 100%; height: 100%; object-fit: cover; object-position: center; image-rendering: -webkit-optimize-contrast; }
+}
+
+/* -- people - PAGE PEOPLE --*/
+
+.listing-box:hover {
+  border-color: $primary;
+  background-color: transparent;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.1), 
+            0px 2px 4px rgba(0,0,0,0.1), 
+            0px 4px 8px rgba(0,0,0,0.1), 
+            0px 8px 16px rgba(0,0,0,0.1);
+}
+
+.listing-box-title {
+  max-width: 80%;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  color: #222;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.listing-box-subtitle {
+  /*    margin-top: auto;*/
+  //font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 0;
+  color: #757883;
+  line-height: 1.5;
+}
+
+.listing-box-education {
+  margin-bottom: 0;
+  color: #757883;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.listing-box-button a[role="button"] {
+  width: 140px;
+  min-height: 150px;
+  color: rgb(55, 58, 60);
+  text-align: center;
+  border: 1px solid rgb(222, 226, 230);
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.listing-box-section {
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+
+.listing-box-image {
+  object-fit: cover;
+  width: 100%;
+  height: 190px;
+}
+
+.quarto-listing-cols-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.quarto-listing-cols-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.anchored {
+  padding-top: 8px;
+  padding-left: 10px;
+}
+
+/* -- publications --*/
+
+.listing-pub-title {
+  /*font-family: 'Bebas Neue', sans-serif;
+  max-width: 80%;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  color: #222;
+  line-height: 1.2;*/
+  font-size: 18px;
+  font-weight: 700; 
+}
+
+.listing-pub-author {
+  color: #757883;
+  font-size: 13px;
+  margin-bottom: 6px;
+  /*line-height: 1.5;*/
+}
+
+.listing-pub-number {
+  font-weight: 700; 
+  font-size: 15px;
+
+}
+
+.listing-pub-journal {
+  color: #757883;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.listing-pub-url {
+  font-size: 13px;
+
+}
+
+.thumbnail img.thumbnail-image {
+  max-height: 300px !important;
+  max-width: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin-left: auto !important;
+  display: block !important;
+}
+
+/* Collaborative Page Styles - FUNDING PAGE */
+
+.collaborator-list {
+  margin-top: 30px;
+
+  .collaborator-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+
+    img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #eee;
+    }
+
+    /* Responsive: Stack on mobile */
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .collab-name { font-size: 1.4em; font-weight: bold; margin-bottom: 2px; }
+  .collab-inst { font-style: italic; color: #666; margin-bottom: 5px; }
+  .collab-project { margin-bottom: 10px; line-height: 1.4; }
+  
+  .collab-site {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #007bff; 
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Logo Grid for Funding section - FOR MAIN PAGE*/
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; // This centers the logos horizontally
+  align-items: center;     // This centers logos of different heights vertically
+  gap: 50px;               // Increased gap for better visual balance
+  margin: 40px auto;
+  max-width: 1100px;       // Give it a defined width to center against
+}
+
+.logo-item {
+  /* FIXED: Changed flex: 1 to flex: 0 0 auto */
+  /* This prevents logos from shrinking or growing unevenly */
+  flex: 0 0 auto;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+    
+  img {
+    /* FIXED: Using width instead of max-width for consistency */
+    width: 200px;         
+    height: 80px;          // Fixed height keeps the row looking "straight"
+    object-fit: contain;   // Prevents logo distortion
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  }
+
+  .agency-name {
+    width: 100%;
+    max-width: 220px;      // Prevents long names from pushing the grid apart
+    word-wrap: break-word;
+    display: block;
+    margin-top: 15px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    line-height: 1.2;
+  }
+
+  /* Hover State */
+  &:hover {
+    img {
+      transform: translateY(-5px); 
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+    .agency-name {
+      opacity: 1;
+    }
+  }
+}
+
+/* -- Utilities -- */
+.sand-background { background-color: $sand; }
+.primary-background { background-color: $primary; }
+
+/* -- Support Section Styling FOR THE FUNDING PAGE -- */
+.support-logos {
+  background-color: white; 
+  padding: 60px 0; 
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // This forces the children to stay centered
+  overflow: hidden;
+  z-index: 1; 
+
+  h1, #support-funding {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+    color: black !important;
+    text-align: left;
+    border: none;
+  }
+
+  .logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; // Centers logos horizontally
+    align-items: center;     // Aligns logos vertically (prevents wonky heights)
+    gap: 60px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  .logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 auto; // CRITICAL: Prevents logos from stretching/offsetting
+    text-decoration: none;
+
+    img {
+      height: 75px; 
+      width: auto;   
+      object-fit: contain; 
+      max-width: 250px;
+      filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.1));
+      transition: transform 0.3s ease;
+    }
+
+    .agency-name {
+      margin-top: 15px;
+      font-size: 0.9em;
+      font-weight: 600;
+      color: #333;
+      text-align: center;
+      max-width: 220px; // Keeps the text from pushing the logo off-center
+    }
+
+    &:hover img {
+      transform: translateY(-5px);
+    }
+  }
+}

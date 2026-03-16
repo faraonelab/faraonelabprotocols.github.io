@@ -1,0 +1,7 @@
+{
+  "name": "faraone-lab-protocols",
+  "private": true,
+  "devDependencies": {
+    "staticrypt": "^3.5.3"
+  }
+}
