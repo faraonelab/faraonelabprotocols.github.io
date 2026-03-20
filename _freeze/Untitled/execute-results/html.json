@@ -1,0 +1,15 @@
+{
+  "hash": "80cf59d16fc8f6f2de7fba3ae9b41033",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nauthor: Luís Adriano Anholeto\ndate: '2026-03-20'\ntitle: Untitled\noutput: html_document\n---\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

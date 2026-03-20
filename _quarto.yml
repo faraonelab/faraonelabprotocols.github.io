@@ -30,9 +30,11 @@ website:
       - section: "Lab Protocols"
         contents: 
           - section: "General Procedures"
-            contents: content/general/*.qmd
-          - section: "Equipment Manuals"
-            contents: content/equipments/*.qmd
+            contents: content/01-general/*.qmd
+          - section: "Equipment SOP"
+            contents: content/02-equipments/*.qmd
+          - section: "Artificial Tick Feeding"
+            contents: content/03-artificial-tick-feeding/*.qmd
 
   page-footer: 
     background: "#F6F5F3"

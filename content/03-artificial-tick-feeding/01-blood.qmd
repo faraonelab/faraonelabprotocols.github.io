@@ -1,0 +1,125 @@
+---
+title: Storage and preparation of defibrinated bovine blood for artificial tick feeding
+author: Luís Adriano Anholeto
+date: "2026-03-20"
+version: 1.0
+bibliography: references.bib
+---
+
+::: callout-important
+# Safety Requirements
+
+-   Wear **gloves, lab coat, and safety goggles** at all times.
+-   Treat bovine blood as **potentially biohazardous material**.
+-   Work inside a **biological safety cabinet (Class II)**.
+-   Disinfect working surfaces before and after use using **70% ethanol**.
+-   Dispose of blood waste according to **institutional biosafety regulations for biological materials**.
+:::
+
+# Purpose
+
+This protocol describes the **standardized procedure for storing, handling, and preparing commercially sourced defibrinated bovine blood (Cedarlane)** for use in **artificial membrane feeding systems for ixodid ticks**.\
+The protocol aims to maintain blood quality, minimize contamination and hemolysis, and ensure reproducible conditions during laboratory tick feeding experiments.
+
+This protocol applies to laboratory experiments involving **artificial membrane feeding of hard ticks (Acari: Ixodidae)** using **commercially sourced defibrinated bovine blood**.
+
+# Roles and Responsibilities
+
+**Principal Investigator** - Ensures the protocol is implemented according to laboratory standards. - Approves revisions of the protocol.
+
+**Laboratory Personnel** - Follow this SOP when handling and preparing blood for artificial tick feeding. - Maintain aseptic technique during aliquoting and preparation. - Record dates of blood opening, aliquoting, and expiration.
+
+**Laboratory Manager** - Maintains supplies required for the protocol. - Ensures equipment are functioning properly.
+
+# Definitions
+
+**Defibrinated blood**\
+Whole blood from which fibrin has been removed to prevent clot formation.
+
+**Artificial membrane feeding**\
+A laboratory method that allows ticks to feed on blood through an artificial membrane rather than on a live host.
+
+**Aliquot**\
+A measured portion of a larger blood sample stored separately to reduce contamination and repeated freeze–thaw or warming cycles.
+
+# Materials
+
+-   Cedarlane **defibrinated bovine blood**
+-   Sterile D-glucose
+-   ATP (adenosine triphosphate)
+-   Gentamicin stock solution
+-   Sterile 15 mL or 50 mL conical tubes for aliquots
+-   Serological pipettes and sterile filtered tips
+-   0.22 µm sterile syringe filters (for ATP solution if required)
+-   70% ethanol for surface disinfection
+-   Biosafety cabinet
+-   Refrigerator set to **4 °C**
+-   Water bath set to **37 °C**
+-   Labels with date of receipt, date of first opening, and aliquot number
+
+# Procedure
+
+-   Prepare the 100 mg/mL glucose solution (click here for the protocol) in advance.
+
+## Aliquoting protocol on the day the bottle is opened
+
+1.  Gently invert the Cedarlane blood bottle several times to resuspend cells. Do **not** shake vigorously.
+2.  Under the biological safety cabinet, dispense the blood into **single-use or single-day aliquots** (Falcon Tubes of 50mL).
+3.  Add 1 mL of glucose stock solution at 100 mg/mL for each 50 mL of blood (final concentration of 2 g/L of glucose).
+4.  Label each aliquot with:
+    -   product
+    -   lot number
+    -   date opened
+    -   aliquot volume
+    -   planned expiration date
+5.  Immediately return aliquots to **4 °C**.
+
+## Immediately before feeding
+
+For each aliquot needed for a blood change:
+
+1.  Remove the aliquot from the refrigerator.
+2.  Warm the blood to **37 °C** in a water bath.
+3.  Add **5 µL of** **3 mM ATP per well** to the blood tube immediately before use [@khoo2022].
+4.  Add **50 µL of 100x stock of penicillin/streptomycin/fungizone** per well to the blood tube immediately before use [@khoo2022].
+5.  Mix gently by inversion.
+6.  Transfer 4.5 mL of blood into a well of a fresh 6-well plate and follows the tick feeding protocol.
+
+::: callout-important
+# Shelf-life and storage conditions
+
+## Temperature
+
+Store blood at: - **4 °C** at all times when not in active use
+
+## Maximum storage time
+
+Use the following evidence-based limits:
+
+-   **Best practice:** use within **3–5 days after first opening**
+-   **Upper limit:** **7 days at 4 °C**, provided the blood remains visibly acceptable and has been handled aseptically
+
+## Light protection
+
+Store aliquots protected from light when possible.
+
+## Acceptance criteria before use
+
+Before each feeding, inspect the aliquot. Use only blood that: - remains uniformly fluid after gentle inversion - shows no obvious foul odour - has no visible clumps, fibrin strands, or heavy precipitate - has no obvious colour change suggestive of extensive hemolysis - has no turbidity suggestive of contamination Discard the aliquot if any of the above are present.
+:::
+
+## Suggested aliquot size
+
+Use aliquots matched to one day of feeding. For example: - if one feeder requires 10 mL every 12 h, prepare aliquots in multiples of daily use - avoid large shared aliquots that must be repeatedly opened over several days
+
+# Revision History
+
+| Version | Date       | Author         | Description      |
+|---------|------------|----------------|------------------|
+| 1.0     | 2026-03-20 | L. A. Anholeto | Initial protocol |
+
+<button onclick="window.print()" class="print-button" title="Print Protocol">
+
+<i class="bi bi-printer"></i>
+
+</button>
