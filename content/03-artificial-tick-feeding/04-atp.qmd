@@ -1,0 +1,84 @@
+---
+title: Preparation of sterile 3 mM ATP stock solution
+author: Luís Adriano Anholeto
+date: "2026-03-20"
+version: 1.0
+---
+
+::: callout-important
+## Safety Requirements
+
+- Wear **gloves, lab coat, and safety goggles**.
+- Perform preparation inside a **Class II biological safety cabinet**.
+- Disinfect working surfaces using **70% ethanol** before and after preparation.
+:::
+
+# Purpose
+
+This protocol describes the preparation of a **sterile 3 mM ATP solution used as a phagostimulant in artificial membrane feeding systems for ticks**.
+
+ATP acts as a **feeding stimulant**, promoting attachment and feeding success in ixodid ticks during artificial membrane feeding experiments.
+
+# Scope
+
+This protocol applies to preparation of **ATP solutions used in artificial feeding assays for ticks**.
+
+# Materials
+
+- Adenosine triphosphate (ATP)
+- Sterile **1× PBS**
+- Analytical balance
+- Micropipettes and sterile tips
+- Sterile microcentrifuge tubes
+- Sterile syringe
+- **0.22 µm syringe filter**
+- Biological safety cabinet
+- Labels
+
+# Procedure
+
+## Example preparation: 10 mL ATP stock solution
+
+1. Disinfect the work surface with **70% ethanol**.
+2. Weigh **16.5 mg ATP**.
+3. Transfer ATP into a sterile tube.
+4. Add **10 mL sterile PBS**.
+5. Mix gently until the ATP is completely dissolved.
+
+Final concentration:
+
+**3 mM ATP**
+
+## Sterilization
+
+1. Draw the ATP solution into a **sterile syringe**.
+2. Attach a **0.22 µm syringe filter**.
+3. Filter the solution into a **sterile microcentrifuge tube**.
+
+## Aliquoting
+
+Divide the ATP solution into **small aliquots (0.5–1 mL)** to avoid repeated freeze–thaw cycles.
+
+# Storage
+
+Store ATP aliquots at:
+
+**−20 °C**
+
+Recommended shelf life:
+
+- **3–6 months**
+
+Avoid repeated freeze–thaw cycles.
+
+# Example use in tick feeding protocol
+
+Immediately before feeding, add:
+
+**5 µL of 3 mM ATP per well** of blood.
+
+# Revision History
+
+| Version | Date | Author | Description |
+|---|---|---|---|
+| 1.0 | 2026-03-20 | L. A. Anholeto | Initial protocol |

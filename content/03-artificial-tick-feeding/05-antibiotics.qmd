@@ -1,0 +1,86 @@
+---
+title: Preparation of antibiotic mix for tick artificial feeding blood
+author: Luís Adriano Anholeto
+date: "2026-03-20"
+version: 1.0
+---
+
+::: callout-important
+## Safety Requirements
+
+- Wear **gloves, lab coat, and safety goggles**.
+- Handle antibiotics using appropriate **laboratory safety procedures**.
+- Perform preparation inside a **biological safety cabinet** to maintain sterility.
+- Disinfect surfaces with **70% ethanol** before and after preparation.
+:::
+
+# Purpose
+
+This protocol describes the preparation and use of an **antibiotic–antimycotic mixture used to prevent bacterial and fungal contamination during artificial membrane feeding of ticks**.
+
+The antibiotic mix is added to **bovine blood immediately before feeding**.
+
+# Scope
+
+This protocol applies to experiments using **artificial membrane feeding systems for ticks**.
+
+# Materials
+
+- Penicillin/Streptomycin/Fungizone solution (100× stock)
+- Sterile microcentrifuge tubes
+- Micropipettes and sterile tips
+- Biological safety cabinet
+- Labels
+
+# Antibiotic composition
+
+Typical commercial antibiotic–antimycotic solutions contain:
+
+- **10,000 units/mL penicillin**
+- **10,000 µg/mL streptomycin**
+- **25 µg/mL amphotericin B**
+
+# Procedure
+
+## Preparation
+
+Commercial antibiotic–antimycotic solutions are typically supplied as a **100× stock solution** and do not require additional preparation.
+
+If needed:
+
+1. Thaw the antibiotic stock at **room temperature or 37 °C water bath**.
+2. Mix gently by inversion.
+3. Keep the stock on **ice or at 4 °C during use**.
+
+# Example use in tick feeding blood
+
+For each feeding well:
+
+1. Prepare **5 mL of supplemented bovine blood**.
+2. Add:
+
+**50 µL of 100× penicillin/streptomycin/fungizone stock**
+
+This produces a **1× working concentration** in the blood.
+
+3. Mix gently by inversion.
+
+Add the antibiotic mixture **immediately before use**.
+
+# Storage
+
+Store antibiotic stock solution at:
+
+**−20 °C**
+
+Avoid repeated freeze–thaw cycles.
+
+# Important considerations
+
+Antibiotics should **not be added when studying microbial infections** or pathogen transmission, as they may inhibit the organism under study.
+
+# Revision History
+
+| Version | Date | Author | Description |
+|---|---|---|---|
+| 1.0 | 2026-03-20 | L. A. Anholeto | Initial protocol |

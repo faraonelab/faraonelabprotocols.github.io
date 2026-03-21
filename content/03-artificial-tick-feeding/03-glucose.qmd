@@ -1,0 +1,112 @@
+---
+title: Preparation of 100 mg/mL sterile glucose stock solution in PBS
+author: Luís Adriano Anholeto
+date: "2026-03-20"
+version: 1.0
+---
+
+::: callout-important
+# Safety Requirements
+
+- Wear **gloves, lab coat, and safety goggles**.
+- Perform preparation inside a **biological safety cabinet (Class II)** to maintain sterility.
+- Disinfect working surfaces with **70% ethanol** before and after preparation.
+:::
+
+# Purpose
+
+This protocol describes the preparation of a **100 mg/mL sterile D-glucose stock solution using phosphate-buffered saline (PBS) as solvent**.
+
+The solution is used to **supplement bovine blood for artificial membrane feeding of ticks**, ensuring a consistent glucose concentration during feeding experiments.
+
+# Scope
+
+This protocol applies to laboratory experiments involving:
+
+- **artificial membrane feeding of ticks**
+- preparation of **sterile glucose supplements for blood feeding media**
+
+# Definitions
+
+**Stock solution**  
+A concentrated solution that can be diluted to prepare working solutions.
+
+**Sterile filtration**  
+A sterilization method that removes microorganisms using a membrane filter, typically **0.22 µm pore size**.
+
+# Materials
+
+- D-glucose powder (analytical grade)
+- Sterile **1× PBS**
+- Sterile conical tubes or sterile reagent bottles
+- Serological pipettes or micropipettes with sterile tips
+- **0.22 µm sterile syringe filter**
+- Sterile syringe
+- Analytical balance
+- Biological safety cabinet
+- Labels and marker
+
+# Procedure
+
+## Example preparation (10 mL stock solution)
+
+1. Clean the working surface with **70% ethanol**.
+2. Place a sterile container on an **analytical balance**.
+3. Weigh **1 g of D-glucose**.
+4. Transfer the glucose into a sterile container.
+5. Add approximately **8 mL of sterile PBS**.
+6. Mix gently until the glucose is completely dissolved.
+7. Adjust the final volume to **10 mL with sterile PBS**.
+
+Final concentration:
+
+**100 mg/mL glucose**
+
+## Sterilization
+
+1. Draw the glucose solution into a **sterile syringe**.
+2. Attach a **0.22 µm sterile syringe filter**.
+3. Filter the solution into a **sterile labeled tube or bottle**.
+
+This step removes potential microbial contamination.
+
+## Labeling
+
+Label the container with:
+
+- solution name: **Glucose stock (100 mg/mL)**
+- solvent: **PBS**
+- date of preparation
+- initials of preparer
+
+# Storage
+
+Store the glucose stock solution at:
+
+**4 °C**
+
+Recommended shelf life:
+
+- **1–2 weeks at 4 °C**
+
+Discard the solution if:
+
+- turbidity appears
+- precipitation forms
+- contamination is suspected
+
+# Example use in tick feeding protocol
+
+To supplement bovine blood with **2 g/L glucose**:
+
+Add:
+
+**1 mL of 100 mg/mL glucose stock solution to 50 mL of blood**
+
+This produces the desired **final glucose concentration of 2 g/L**.
+
+# Revision History
+
+| Version | Date | Author | Description |
+|---|---|---|---|
+| 1.0 | 2026-03-20 | L. A. Anholeto | Initial protocol |
